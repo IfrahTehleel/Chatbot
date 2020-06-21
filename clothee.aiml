@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<aiml version="2.0">
+	<category>
+    <pattern>*</pattern>
+    <template>
+        <random>
+            <li>Oh i can't answer that right now.</li>
+            <li>I can not understand it.</li>
+            <li>Please say something else.</li>
+            <li>Try saying hi!</li>
+        </random>
+    </template>
+  </category>
+  
+<category>
+    <pattern>HI</pattern>
+    <template>
+        <random>
+            <li>Hi!</li>
+            <li>Hi there!</li>
+            <li>Hello!</li>
+            <li>Hey!</li>
+            <li>Good to see you!</li>
+        </random>   
+        
+            Lets know eactother! So, what is your name? [(e.g) i am clothee].
+        
+    </template>
+</category>
+
+ <category>
+      <pattern>hello</pattern>
+      <template>
+          <srai>HI</srai>
+      </template>
+  </category>
+  <category>
+      <pattern>hey</pattern>
+      <template>
+          <srai>HI</srai>
+      </template>
+  </category>
+  <category>
+      <pattern>salam</pattern>
+      <template>
+          <srai>HI</srai>
+      </template>
+  </category>
+  <category>
+      <pattern>hi*</pattern>
+      <template>
+          <srai>HI</srai>
+      </template>
+  </category>
+
+<category>
+    <pattern>my name is *</pattern>
+    <template>Welcome <set name= "username"><star></star></set>! to SUEE DHAGA clothes company. Clothes for male or female?</template>
+</category>
+<category>
+    <pattern>i am *</pattern>
+    <template>welcome <set name= "username"><star></star></set>!to SUEE DHAGA clothes company. Clothes for male or female?</template>
+</category>
+
+
+<category>
+    <pattern>female</pattern>
+     <template>
+         <think><set name = "gender"> Female</set></think>
+         <condition name = "gender" value = "Female">
+            ok <get name="username"></get>! what type of cloth you are willing to buy? formal or casual?
+         </condition>
+     </template>
+</category>
+<category>
+    <pattern>male</pattern>
+     <template>
+
+            ok <get name="username"></get>! what type of cloth you are willing to buy? formal or casual?
+
+     </template>
+</category>
+
+<category>
+    <pattern>formal</pattern>
+    <template>
+
+            Nice! we have a large collection of formal clothing. In formals, we deal in chiffon, crinkal, jama waar, silk, velvet only. which one do you want to buy?
+
+    </template>
+</category>
+
+<category>
+    <pattern>pentcoat</pattern>
+    <template>We have few pentcoats left. We will notify you soon.</template>
+</category>
+<category>
+    <pattern>dresspent</pattern>
+    <template>We have few dresspents left. We will notify you soon. Thankyou <get name="username"></get>! Check other collections too.</template>
+</category>
+<category>
+    <pattern>dressshirt</pattern>
+    <template>We have few dressshirt left. We will notify you soon. Thankyou <get name="username"></get>. Check our other collection too.</template>
+</category>
+<category>
+    <pattern>chiffon</pattern>
+    <template>nice choice! it looks good in formal wear. so now we are clear about the stuff of your cloth! what style you want your dress to be stitched? (long maxi or kurta  )   </template>
+</category>
+<category>
+    <pattern>crinkal</pattern>
+    <template><srai>chiffon</srai></template>
+</category>
+<category>
+    <pattern>jama waar</pattern>
+    <template><srai>chiffon</srai></template>
+</category>
+<category>
+    <pattern>silk</pattern>
+    <template><srai>chiffon</srai></template>
+</category>
+<category>
+    <pattern>velvet</pattern>
+    <template><srai>chiffon</srai></template>
+</category>
+
+<category>
+    <pattern>long maxi</pattern>
+    <template>so, we have noted your details. we will message after checking the availability of required cloth. thankyou for considering suee dhaga! <get name= "username"></get>.</template>
+</category>
+<category>
+    <pattern>kurta</pattern>
+    <template><srai>long maxi</srai></template>
+</category>
+<category>
+    <pattern>casual</pattern>
+    <template>
+
+                For men, we have jeans, tshirts and trousers. What do you want to buy?    
+
+    </template>
+</category>
+
+<category>
+    <pattern>Nothing</pattern>
+    <template>Try something else. We have a large range of clothes for both genders.</template>
+</category>
+
+<category>
+    <pattern>cotton</pattern>
+    <template>okay <get name="username"></get>! kurta or short shirt?</template>
+</category>
+<category>
+    <pattern>lawn</pattern>
+    <template><srai>cotton</srai></template>
+</category>
+
+<category>
+    <pattern>kurta</pattern>
+    <template>So, we have noted your details. We will message after checking the availability of required cloth. thankyou <get name= "username"></get> for considering suee dhaga!.</template>
+</category>
+<category>
+    <pattern>short shirt</pattern>
+    <template>So, we have noted your details. We will message after checking the availability of required cloth. thankyou  <get name= "username"></get> for considering suee dhaga!.</template>
+</category>
+
+
+<category>
+    <pattern>jeans</pattern>
+    <template>Oh! We are out of stock. Kindly come back later.</template>
+</category>
+<category>
+    <pattern>tshirts</pattern>
+    <template>Oh! We are out of stock. Kindly come back later.</template>
+</category>
+<category>
+    <pattern>trousers</pattern>
+    <template>Oh! We are out of stock. Kindly come back later.</template>
+</category>
+    
+</aiml>
